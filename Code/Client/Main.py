@@ -154,26 +154,26 @@ class MyWindow(QMainWindow,Ui_client):
         if event.isAutoRepeat():
             pass
         else :
-            if event.key() == Qt.Key_W:
-                print("W")
+            if event.key() == Qt.Key_Z:
+                print("Z")
                 self.forward()
-                self.Key_W=True
+                self.Key_Z=True
             elif event.key() == Qt.Key_S:
                 print("S")
                 self.backward()
                 self.Key_S=True
-            elif event.key() == Qt.Key_A:
-                print("A")
+            elif event.key() == Qt.Key_Q:
+                print("Q")
                 self.left()
-                self.Key_A=True
+                self.Key_Q=True
             elif event.key() == Qt.Key_D:                  
                 print("D")
                 self.right()
                 self.Key_D=True
-            elif event.key() == Qt.Key_Q:                  
-                print("Q")
+            elif event.key() == Qt.Key_A:                  
+                print("A")
                 self.step_left()
-                self.Key_Q=True
+                self.Key_A=True
             elif event.key() == Qt.Key_E:                  
                 print("E")
                 self.step_right()
@@ -184,16 +184,16 @@ class MyWindow(QMainWindow,Ui_client):
                 self.Key_Space=True
 
     def keyReleaseEvent(self, event):
-        if(event.key() == Qt.Key_W):
-            if not(event.isAutoRepeat()) and self.Key_W==True:
-                print("release W")
+        if(event.key() == Qt.Key_Z):
+            if not(event.isAutoRepeat()) and self.Key_Z==True:
+                print("release Z")
                 self.stop()
-                self.Key_W=False
-        elif(event.key() == Qt.Key_A):
-            if not(event.isAutoRepeat()) and self.Key_A==True:
-                print("release A")
+                self.Key_Z=False
+        elif(event.key() == Qt.Key_Q):
+            if not(event.isAutoRepeat()) and self.Key_Q==True:
+                print("release Q")
                 self.stop()
-                self.Key_A=False
+                self.Key_Q=False
         elif(event.key() == Qt.Key_S):
             if not(event.isAutoRepeat()) and self.Key_S==True:
                 print("release S")
@@ -204,11 +204,11 @@ class MyWindow(QMainWindow,Ui_client):
                 print("release D")
                 self.stop()
                 self.Key_D=False
-        elif(event.key() == Qt.Key_Q):
-            if not(event.isAutoRepeat()) and self.Key_Q==True:
-                print("release Q")
+        elif(event.key() == Qt.Key_A):
+            if not(event.isAutoRepeat()) and self.Key_A==True:
+                print("release A")
                 self.stop()
-                self.Key_Q=False
+                self.Key_A=False
         elif(event.key() == Qt.Key_E):
             if not(event.isAutoRepeat()) and self.Key_E==True:
                 print("release E")
